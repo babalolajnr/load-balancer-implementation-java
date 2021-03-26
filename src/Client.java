@@ -1,21 +1,20 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
 
+/**
+ * Progarm for the load balancer system
+ * this program uses a weighted round robin implementation
+ * of a load balancer to distribute 16 requests to the available nodes
+ * by examining the weights of each node
+ * 
+ */
 public class Client {
 
     public static void main(String[] args) {
 
-        int NUM_OF_REQUESTS = 15;
+        int NUM_OF_REQUESTS = 16;
         Client client = new Client();
-
-        ArrayList<String> ipPool = new ArrayList<>();
-        ipPool.add("192.168.0.1");
-        ipPool.add("192.168.0.2");
-        ipPool.add("192.168.0.3");
-        ipPool.add("192.168.0.4");
-        ipPool.add("192.168.0.5");
 
         Map<String, Integer> ipPoolWeighted = new HashMap<>();
         ipPoolWeighted.put("192.168.0.1", 7);
