@@ -2,11 +2,11 @@ import java.util.Collections;
 import java.util.List;
 
 public abstract class LoadBalancer {
-    final List<String> ipList;
+    final List<String> nodeList;
 
-    public LoadBalancer(List<String> ipList) {
-        this.ipList = Collections.unmodifiableList(ipList);
+    public LoadBalancer(List<String> nodeList) {
+        this.nodeList = Collections.unmodifiableList(nodeList);
     }
 
-    abstract String getIp();
+    abstract String getNode();
 }
